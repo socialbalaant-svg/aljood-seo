@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة SEO - Aljood</title>
+    <title>تحليل الكلمات المفتاحية - الجود</title>
     <style>
         :root { --primary: #7b1fa2; --light: #f5f5f5; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,24 +17,26 @@
         .nav-tabs a:hover, .nav-tabs a.active { background: rgba(255,255,255,0.2); }
         .header { background: linear-gradient(135deg, var(--primary), #7b1fa2); color: white; padding: 40px; text-align: center; }
         .header h1 { font-size: 1.8em; margin-bottom: 10px; }
-        .score { font-size: 3em; margin: 15px 0; }
         .content { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .card { background: var(--white); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: var(--primary); margin-bottom: 15px; }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 1.3em; }
+        h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.1em; }
         .badge { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 0.85em; margin: 2px; }
         .badge-success { background: #e8f5e9; color: #2e7d32; }
         .badge-warning { background: #fff8e1; color: #f57c00; }
         .badge-danger { background: #ffebee; color: #c62828; }
+        .table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .table th, .table td { padding: 10px; text-align: right; border-bottom: 1px solid #eee; }
+        .table th { background: #f5f5f5; color: var(--primary); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
         ul { padding-right: 20px; }
-        li { margin-bottom: 8px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
         .footer { background: var(--primary); color: white; text-align: center; padding: 15px; margin-top: 30px; }
-        .task { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; }
-        .task:last-child { border-bottom: none; }
-        .priority { width: 10px; height: 10px; border-radius: 50%; margin-left: 15px; }
-        .priority-high { background: #c62828; }
-        .priority-medium { background: #f57c00; }
-        .priority-low { background: #4CAF50; }
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 15px; }
+        .tag { padding: 5px 15px; border-radius: 20px; font-size: 0.9em; }
+        .tag-high { background: #c62828; color: white; }
+        .tag-medium { background: #f57c00; color: white; }
+        .tag-low { background: #4CAF50; color: white; }
     </style>
 </head>
 <body>
@@ -51,32 +53,117 @@
         <a href="TECHNICAL-AUDIT.html">🔍 الفحص التقني</a>
         <a href="KEYWORDS.html">🔑 الكلمات</a>
         <a href="COMPETITORS.html">👥 المنافسين</a>
+        <a href="ON-PAGE.html">📝On-Page</a>
         <a href="CONTENT.html">📖 المحتوى</a>
-        <a href="TASKS.html">✅ المهام</a>
+        <a href="SEO-DASHBOARD.html">📊 لوحة SEO</a>
     </div>
+
     <div class="header">
-        <h1>لوحة SEO - الجود</h1>
-        <div class="score">35/100</div>
+        <h1>🔑 تحليل الكلمات المفتاحية - جمعية الجود</h1>
+        <p>aljoodb.org.sa</p>
     </div>
+
     <div class="content">
+        <!-- الكلمات الحالية -->
         <div class="card">
-            <h1>📊 ملخص الفحص</h1>
-            <p>الموقع: aljoodb.org.sa</p>
-            <p style="margin-top:10px;"><strong>النتيجة:</strong> 35/100</p>
-        </div>
-        <div class="card">
-            <h1>📋 الأقسام</h1>
-            <div class="grid">
-                <a href="TECHNICAL-AUDIT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔍 الفحص التقني</h3></div></a>
-                <a href="KEYWORDS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔑 الكلمات</h3></div></a>
-                <a href="COMPETITORS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>👥 المنافسين</h3></div></a>
-                <a href="CONTENT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>📖 المحتوى</h3></div></a>
-                <a href="TASKS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>✅ المهام</h3></div></a>
+            <h1>🎯 الكلمات المفتاحية الحالية</h1>
+            <p>الموقع يستخدم الكلمات التالية في meta keywords:</p>
+            <div class="tag-cloud">
+                <span class="tag tag-high">جمعية الجود</span>
+                <span class="tag tag-high">الخدمات الإنسانية</span>
+                <span class="tag tag-medium">التأثير المجتمعي</span>
+                <span class="tag tag-medium">المبادرات المستدامة</span>
+                <span class="tag tag-medium">التمكين الاجتماعي</span>
+                <span class="tag tag-medium">التكافل الاجتماعي</span>
+                <span class="tag tag-low">جودة الحياة</span>
+            </div>
+            <div class="alert alert-warning" style="margin-top:15px;">
+                ⚠️ meta keywords محدودة جداً - يفضل إضافة المزيد
             </div>
         </div>
+
+        <!-- الكلمات المستهدفة -->
+        <div class="card">
+            <h1>🎯 الكلمات المستهدفة المقترحة</h1>
+            <table class="table">
+                <tr><th>الكلمة</th><th>التنافسية</th><th>القيمة</th><th>الأولوية</th></tr>
+                <tr><td>جمعية الجود ببحرة</td><td>منخفضة</td><td>عالية</td><td><span class="badge badge-danger">عالية</span></td></tr>
+                <tr><td>كفالة الأيتام</td><td>متوسطة</td><td>عالية</td><td><span class="badge badge-danger">عالية</span></td></tr>
+                <tr><td>كفالة الأسر</td><td>متوسطة</td><td>عالية</td><td><span class="badge badge-danger">عالية</span></td></tr>
+                <tr><td>تبرع بحرة</td><td>منخفضة</td><td>عالية</td><td><span class="badge badge-danger">عالية</span></td></tr>
+                <tr><td>صدقة</td><td>عالية</td><td>متوسطة</td><td><span class="badge badge-warning">متوسطة</span></td></tr>
+                <tr><td>زكاة</td><tdtd>متوسطة</td><td>متوسطة</td><td><span class="badge badge-warning">متوسطة</span></td></tr>
+                <tr><td>الأيتام</td><td>عالية</td><td>عالية</td><td><span class="badge badge-warning">متوسطة</span></td></tr>
+                <tr><td>مساعدة اجتماعية</td><tdtd>منخفضة</td><td>متوسطة</td><td><span class="badge badge-warning">متوسطة</span></td></tr>
+                <tr><td>تطوع</td><tdtd>عالية</td><td>متوسطة</td><td><span class="badge badge-success">ثانوية</span></td></tr>
+                <tr><td>جمعيات خيرية</td><tdtd>عالية</td><td>عالية</td><td><span class="badge badge-success">ثانوية</span></td></tr>
+            </table>
+        </div>
+
+        <!-- كلمات Long-tail -->
+        <div class="card">
+            <h1>📝 كلمات Long-tail المقترحة</h1>
+            <ul>
+                <li>"كفالة يتيم شهرياً" - بحث محدد عالي التحويل</li>
+                <li>"تبرع للأسر المحتاجة" - نوايا تبرع واضحة</li>
+                <li>"سلال غذائية للأسر" - طلب محدد</li>
+                <li>"كفالة أرامل ومطلقات" - niche محدد</li>
+                <li>"صدقة جارية على الميت" - محتوى إسلامي</li>
+                <li>"صدقة لنصرة الأقصى" - حملات محددة</li>
+                <li>"تبرع بالكفالات" - نية تبرع</li>
+                <li>"حساب الزكاة" - أداة محسوبة</li>
+                <li>"الأوقاف الخيرية" - وقفية</li>
+                <li>"مساعدة مالية طارئة" - حالات طارئة</li>
+            </ul>
+        </div>
+
+        <!-- تحليل المنافسين -->
+        <div class="card">
+            <h1>🔍 تحليل كلمات المنافسين</h1>
+            <table class="table">
+                <tr><th>المنافس</th><th>الكلمات الرئيسية</th></tr>
+                <tr><td>eljod.org.sa</td><td>صدقة جارية، صك الجود، الأيتام، الأرامل، ضيوف الرحمن</td></tr>
+                <tr><td>aljud.org.sa</td><td>كفل يتيم، كفالات، حالات إنسانية، علاجية</td></tr>
+                <tr><td>aljod.org.sa</td><td>تطوع، مليون متطوع، مبادرات مجتمعية</td></tr>
+                <tr><td>jod.org.sa</td><td>مبنى ضيوف الرحمن، أجرك مضاعف، العمرة</td></tr>
+                <tr><td>jawwed.org.sa</td><td>غير ربحية، رؤية 2030، مليون متطوع</td></tr>
+            </table>
+        </div>
+
+        <!-- الفجوات -->
+        <div class="card">
+            <h1>📊 فجوات الكلمات</h1>
+            <div class="alert alert-warning">
+                <strong>فجوات المكتشفة:</strong>
+                <ul style="margin-top:10px;">
+                    <li>❌ لا يوجد محتوى عن "الصدقة الجارية" (المنافسون أقوى)</li>
+                    <li>❌ لا يوجد محتوى عن "الأوقاف" (فرصة كبيرة)</li>
+                    <li>❌ لا يوجد محتوى عن "حساب الزكاة" (أداة تفاعلية)</li>
+                    <li>❌ لا يوجد محتوى متعلق بـ "رؤية 2030" أو "التطوع"</li>
+                    <li>❌ لا يوجد محتوى لـ "الحالات الإنسانية" أو "العلاجية"</li>
+                    <li>❌ لا يوجد محتوى لـ SEO باللغة الإنجليزية</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- التوصيات -->
+        <div class="card">
+            <h1>✅ توصيات الكلمات</h1>
+            <ul>
+                <li><strong>إضافة:</strong> صفحة مخصصة لـ "الأيتام" مع كلمات ذات قيمة</li>
+                <li><strong>إضافة:</strong> أدوات تفاعلية (حاسبة الزكاة) - keywords</li>
+                <li><strong>إضافة:</strong> محتوى الأوقاف والصدقة الجارية</li>
+                <li><strong>إضافة:</strong> مدونة/أخبار بـ long-tail keywords</li>
+                <li><strong>تحسين:</strong> meta description بطول 150-160 حرف</li>
+                <li><strong>إضافة:</strong> alt text للصور بالكلمات المفتاحية</li>
+                <li><strong>إضافة:</strong> heading tags مع كلمات مفتاحية</li>
+                <li><strong>إضافة:</strong> FAQ page للأسئلة الشائعة</li>
+            </ul>
+        </div>
     </div>
+
     <div class="footer">
-        <p>© 2026 - Socialbalaant</p>
+        <p>© 2026 - Socialbalaant | تحليل الكلمات</p>
     </div>
 </body>
 </html>

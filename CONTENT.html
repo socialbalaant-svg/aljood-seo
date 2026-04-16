@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة SEO - Aljood</title>
+    <title>تحليل المحتوى - الجود</title>
     <style>
         :root { --primary: #7b1fa2; --light: #f5f5f5; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,24 +17,24 @@
         .nav-tabs a:hover, .nav-tabs a.active { background: rgba(255,255,255,0.2); }
         .header { background: linear-gradient(135deg, var(--primary), #7b1fa2); color: white; padding: 40px; text-align: center; }
         .header h1 { font-size: 1.8em; margin-bottom: 10px; }
-        .score { font-size: 3em; margin: 15px 0; }
         .content { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .card { background: var(--white); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: var(--primary); margin-bottom: 15px; }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 1.3em; }
+        h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.1em; }
         .badge { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 0.85em; margin: 2px; }
         .badge-success { background: #e8f5e9; color: #2e7d32; }
         .badge-warning { background: #fff8e1; color: #f57c00; }
         .badge-danger { background: #ffebee; color: #c62828; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        ul { padding-right: 20px; }
-        li { margin-bottom: 8px; }
+        .table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .table th, .table td { padding: 10px; text-align: right; border-bottom: 1px solid #eee; }
+        .table th { background: #f5f5f5; color: var(--primary); }
         .footer { background: var(--primary); color: white; text-align: center; padding: 15px; margin-top: 30px; }
-        .task { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; }
-        .task:last-child { border-bottom: none; }
-        .priority { width: 10px; height: 10px; border-radius: 50%; margin-left: 15px; }
-        .priority-high { background: #c62828; }
-        .priority-medium { background: #f57c00; }
-        .priority-low { background: #4CAF50; }
+        ul { padding-right: 20px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
+        .alert { padding: 15px; border-radius: 8px; margin: 10px 0; border-right: 4px solid; }
+        .alert-danger { background: #ffebee; border-color: #c62828; }
+        .alert-warning { background: #fff8e1; border-color: #f57c00; }
+        .alert-success { background: #e8f5e9; border-color: #2e7d32; }
     </style>
 </head>
 <body>
@@ -51,32 +51,144 @@
         <a href="TECHNICAL-AUDIT.html">🔍 الفحص التقني</a>
         <a href="KEYWORDS.html">🔑 الكلمات</a>
         <a href="COMPETITORS.html">👥 المنافسين</a>
+        <a href="ON-PAGE.html">📝On-Page</a>
         <a href="CONTENT.html">📖 المحتوى</a>
-        <a href="TASKS.html">✅ المهام</a>
+        <a href="SEO-DASHBOARD.html">📊 لوحة SEO</a>
     </div>
+
     <div class="header">
-        <h1>لوحة SEO - الجود</h1>
-        <div class="score">35/100</div>
+        <h1>📖 تحليل المحتوى - الجود</h1>
+        <p>aljoodb.org.sa</p>
     </div>
+
     <div class="content">
+        <!-- ملخص المحتوى -->
         <div class="card">
-            <h1>📊 ملخص الفحص</h1>
-            <p>الموقع: aljoodb.org.sa</p>
-            <p style="margin-top:10px;"><strong>النتيجة:</strong> 35/100</p>
+            <h1>📊 ملخص المحتوى</h1>
+            <table class="table">
+                <tr><th>العنصر</th><th>الحالة</th><th>الملاحظات</th></tr>
+                <tr><td>حجم الصفحة</td><td>108KB</td><td>جيد جداً</td></tr>
+                <tr><td>محتوى HTML</td><td>سهل</td><td>تحتاج JavaScript</td></tr>
+                <tr><td>منهج SPA</td><td>نعم</td><td>Laravel Inertia</td></tr>
+                <tr><td>تطوير المحتوى</td><td>ضعيف</td><td>محدودية التحليل</td></tr>
+            </table>
         </div>
+
+        <!-- المشاريع -->
         <div class="card">
-            <h1>📋 الأقسام</h1>
-            <div class="grid">
-                <a href="TECHNICAL-AUDIT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔍 الفحص التقني</h3></div></a>
-                <a href="KEYWORDS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔑 الكلمات</h3></div></a>
-                <a href="COMPETITORS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>👥 المنافسين</h3></div></a>
-                <a href="CONTENT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>📖 المحتوى</h3></div></a>
-                <a href="TASKS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>✅ المهام</h3></div></a>
+            <h1>📁 المشاريع (17 مشروع)</h1>
+            <table class="table">
+                <tr><th>#</th><th>المشروع</th><th>URL</th><th>الحالة</th></tr>
+                <tr><td>1</td><td>كفالة الأسر</td><td>/projects/2</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>2</td><td>كفالة الأيتام</td><td>/projects/3</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>3</td><td>السلة الغذائية</td><td>/projects/4</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>4</td><td>الكفالة المالية للأرامل والمطلقات</td><td>/projects/5</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>5</td><td>سداد فواتير الكهرباء</td><td>/projects/6</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>6</td><td>الحقيبة الشتوية</td><td>/projects/7</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>7</td><td>كسوة</td><td>/projects/8</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>8</td><td>إعانة الشباب على الزواج</td><td>/projects/9</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>9</td><td>توزيع اللحوم</td><td>/projects/10</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>10</td><td>رعاية الأسر المنتجة</td><td>/projects/11</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>11</td><td>سقيا الماء</td><td>/projects/12</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>12</td><td>إفطار الصائم</td><td>/projects/13</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>13</td><td>الأجهزة الكهربائية</td><td>/projects/14</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>14</td><td>ترميم المنازل</td><td>/projects/15</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>15</td><td>تفريج كربة</td><td>/projects/16</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>16</td><td>رعاية لكبار السن</td><td>/projects/17</td><td><span class="badge badge-success">✅</span></td></tr>
+                <tr><td>17</td><td>تفريج كربة 7</td><td>/projects/20</td><td><span class="badge badge-success">✅</span></td></tr>
+            </table>
+        </div>
+
+        <!-- تحليل المحتوى -->
+        <div class="card">
+            <h1>📝 تحليل جودة المحتوى</h1>
+            <div class="alert alert-warning">
+                <strong>⚠️ تحليل محدود:</strong> الموقع يستخدم SPA (Laravel Inertia)، لا يمكن تحليل المحتوى بشكل كامل بدون JavaScript
+            </div>
+            <ul style="margin-top:15px;">
+                <li>✅ حجم HTML صغير (108KB) - تحميل سريع</li>
+                <li>✅ JS/CSS محسّن (build assets)</li>
+                <li>⚠️ لا يوجد محتوى HTML واضح (JavaScript rendering)</li>
+                <li>⚠️ لا يوجد Server-Side Rendering واضح</li>
+                <li>⚠️ صعوبة تحليل headers, paragraphs, images</li>
+            </ul>
+        </div>
+
+        <!-- المشاكل -->
+        <div class="card">
+            <h1>❌ مشاكل المحتوى</h1>
+            <div class="alert alert-danger">
+                <strong>1. Thin Content</strong><br>
+                HTML يحتوي على محتوى ضعيف جداً - معظمه JavaScript
+            </div>
+            <div class="alert alert-danger">
+                <strong>2. Duplicate Content</strong><br>
+                صفحات المشاريع قد تشترك في نفس template
+            </div>
+            <div class="alert alert-warning">
+                <strong>3. لا Blog/News</strong><br>
+                لا يوجد قسم للأخبار أو المدونة
+            </div>
+            <div class="alert alert-warning">
+                <strong>4. لا محتوى تعليمي</strong><br>
+                لا يوجد محتوى عن الزكاة، الصدقة، الأوقاف
+            </div>
+            <div class="alert alert-warning">
+                <strong>5. محتوى مكرر</strong><br>
+                صفحة "طرق التبرع" و "/page/1" لهما نفس الصورة والوصف
             </div>
         </div>
+
+        <!-- الفجوات -->
+        <div class="card">
+            <h1>📊 فجوات المحتوى</h1>
+            <table class="table">
+                <tr><th>المحتوى المطلوب</th><th>المنافسون</th><th>aljoodb</th></tr>
+                <tr><td>من نحن (مفصل)</td><td>eljod, aljod</td><td>/page/1 (ضعيف)</td></tr>
+                <tr><td>أخبار/إعلانات</td><td>aljod</td><td>❌ لا يوجد</td></tr>
+                <tr><td>الأوقاف والصدقة الجارية</td><td>eljod, jod</td><td>❌ لا يوجد</td></tr>
+                <tr><td>حاسبة الزكاة</td><td>aljud</td><td>❌ لا يوجد</td></tr>
+                <tr><td>إحصائيات (حية)</td><td>eljod</td><td>❌ لا يوجد</td></tr>
+                <tr><td>التطوع</td><td>aljod, jawwed</td><td>❌ لا يوجد</td></tr>
+                <tr><td>محتوى رؤية 2030</td><td>jawwed</td><td>❌ لا يوجد</td></tr>
+                <tr><td>الأسئلة الشائعة (FAQ)</td><td>aljud</td><td>❌ لا يوجد</td></tr>
+            </table>
+        </div>
+
+        <!-- Word Count -->
+        <div class="card">
+            <h1>📏 عدد الكلمات (تقدير)</h1>
+            <table class="table">
+                <tr><th>الصفحة</th><th>الكلمات (تقدير)</th><th>التقييم</th></tr>
+                <tr><td>الرئيسية</td><td>~100-200</td><td><span class="badge badge-warning">قليل</span></td></tr>
+                <tr><td>صفحة مشروع</td><td>~50-100</td><td><span class="badge badge-danger">شحيح</span></td></tr>
+                <tr><td>من نحن</td><td>غير متاح</td><td><span class="badge badge-warning">تحقق</span></td></tr>
+                <tr><td>طرق التبرع</td><td>~50</td><td><span class="badge badge-danger">شحيح</span></td></tr>
+            </table>
+            <div class="alert alert-danger" style="margin-top:15px;">
+                💡 Google يفضل 300+ كلمة للصفحات المهمة. المحتوى الحالي شحيح.
+            </div>
+        </div>
+
+        <!-- التوصيات -->
+        <div class="card">
+            <h1>✅ توصيات المحتوى</h1>
+            <ul>
+                <li><strong>عالية:</strong> تحسين محتوى صفحة "من نحن"</li>
+                <li><strong>عالية:</strong> إضافة قسم الأخبار/المدونة</li>
+                <li><strong>عالية:</strong> إضافة محتوى للأوقاف والصدقة الجارية</li>
+                <li><strong>متوسطة:</strong> إضافة FAQ page</li>
+                <li><strong>متوسطة:</strong> إضافة حاسبة الزكاة</li>
+                <li><strong>متوسطة:</strong> إضافة إحصائيات حية</li>
+                <li><strong>متوسطة:</strong> تحسين محتوى المشاريع (300+ كلمة)</li>
+                <li><strong>ثانوية:</strong> إضافة صفحة التطوع</li>
+                <li><strong>ثانوية:</strong> إضافة محتوى رؤية 2030</li>
+            </ul>
+        </div>
     </div>
+
     <div class="footer">
-        <p>© 2026 - Socialbalaant</p>
+        <p>© 2026 - Socialbalaant | تحليل المحتوى</p>
     </div>
 </body>
 </html>

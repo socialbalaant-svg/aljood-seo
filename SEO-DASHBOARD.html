@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة SEO - الجود</title>
+    <style>
+        :root { --primary: #7b1fa2; --light: #f5f5f5; --white: #ffffff; --danger: #c62828; --warning: #f57c00; --success: #2e7d32; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; direction: rtl; background: var(--light); color: #333; }
+        .top-bar { background: #1a1a2e; padding: 10px 20px; text-align: center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .top-bar span { color: #ffd700; font-weight: bold; }
+        .top-bar a { color: white; text-decoration: none; padding: 5px 12px; border-radius: 15px; background: rgba(255,255,255,0.1); transition: 0.3s; }
+        .top-bar a:hover { background: rgba(255,215,0,0.3); }
+        .nav-tabs { background: var(--primary); padding: 10px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+        .nav-tabs a { color: white; text-decoration: none; padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+        .nav-tabs a:hover, .nav-tabs a.active { background: rgba(255,255,255,0.2); }
+        .header { background: linear-gradient(135deg, var(--primary), #7b1fa2); color: white; padding: 40px; text-align: center; }
+        .header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .content { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .card { background: var(--white); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 1.3em; }
+        h2 { color: var(--primary); margin-bottom: 10px; font-size: 1.1em; }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 0.85em; margin: 2px; }
+        .badge-success { background: #e8f5e9; color: var(--success); }
+        .badge-warning { background: #fff8e1; color: var(--warning); }
+        .badge-danger { background: #ffebee; color: var(--danger); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .table th, .table td { padding: 10px; text-align: right; border-bottom: 1px solid #eee; }
+        .table th { background: #f5f5f5; color: var(--primary); }
+        .metric { text-align: center; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        .metric-value { font-size: 2.5em; font-weight: bold; }
+        .metric-label { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .progress-bar { background: #eee; border-radius: 10px; height: 20px; overflow: hidden; margin: 5px 0; }
+        .progress-fill { height: 100%; border-radius: 10px; transition: width 0.5s; }
+        .footer { background: var(--primary); color: white; text-align: center; padding: 15px; margin-top: 30px; }
+        ul { padding-right: 20px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
+        .alert { padding: 15px; border-radius: 8px; margin: 10px 0; border-right: 4px solid; }
+        .alert-danger { background: #ffebee; border-color: var(--danger); }
+        .alert-warning { background: #fff8e1; border-color: var(--warning); }
+        .alert-success { background: #e8f5e9; border-color: var(--success); }
+        .priority { width: 10px; height: 10px; border-radius: 50%; margin-left: 15px; flex-shrink: 0; }
+        .priority-high { background: var(--danger); }
+        .priority-medium { background: var(--warning); }
+        .priority-low { background: var(--success); }
+        .task { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; }
+        .task:last-child { border-bottom: none; }
+        .task-text { flex: 1; }
+        .gauge { width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; margin: 0 auto; position: relative; }
+        .gauge::before { content: ''; position: absolute; inset: 5px; border-radius: 50%; background: white; }
+        .gauge-text { position: relative; z-index: 1; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>🌐 الجمعيات:</span>
+        <a href="../mshaer-seo/">المشاعر</a>
+        <a href="../aytam-seo/">كفلاء</a>
+        <a href="../aljood-seo/">الجود</a>
+        <a href="../hofath-seo/">حفاظ</a>
+        <a href="../dawahb-seo/">الدعوة</a>
+    </div>
+    <div class="nav-tabs">
+        <a href="index.html">🏠 الرئيسية</a>
+        <a href="TECHNICAL-AUDIT.html">🔍 الفحص التقني</a>
+        <a href="KEYWORDS.html">🔑 الكلمات</a>
+        <a href="COMPETITORS.html">👥 المنافسين</a>
+        <a href="ON-PAGE.html">📝On-Page</a>
+        <a href="CONTENT.html">📖 المحتوى</a>
+        <a href="SEO-DASHBOARD.html">📊 لوحة SEO</a>
+    </div>
+
+    <div class="header">
+        <h1>📊 لوحة SEO - جمعية الجود للخدمات الإنسانية</h1>
+        <p>aljoodb.org.sa</p>
+    </div>
+
+    <div class="content">
+        <!-- النتيجة الإجمالية -->
+        <div class="card">
+            <h1>🎯 النتيجة الإجمالية</h1>
+            <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; align-items:center;">
+                <div style="text-align:center;">
+                    <div class="gauge" style="background: conic-gradient(var(--danger) 0deg 137deg, #eee 137deg 360deg);">
+                        <span class="gauge-text" style="color: var(--danger);">38</span>
+                    </div>
+                    <div class="metric-label">من 100</div>
+                </div>
+                <div style="max-width:400px;">
+                    <table class="table">
+                        <tr><td>الفحص التقني</td><td><strong style="color:var(--danger);">38/100</strong></td></tr>
+                        <tr><td>On-Page SEO</td><td><strong style="color:var(--warning);">45/100</strong></td></tr>
+                        <tr><td>المحتوى</td><td><strong style="color:var(--danger);">25/100</strong></td></tr>
+                        <tr><td>المنافسين</td><td><strong style="color:var(--warning);">40/100</strong></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- المقاييس -->
+        <div class="card">
+            <h1>📈 مقاييس SEO الرئيسية</h1>
+            <div class="grid">
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--success);">✅</div>
+                    <div class="metric-label">HTTPS</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--success);">✅</div>
+                    <div class="metric-label">SSL ساري</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--success);">✅</div>
+                    <div class="metric-label">sitemap.xml</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--success);">✅</div>
+                    <div class="metric-label">robots.txt</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--success);">✅</div>
+                    <div class="metric-label">OG Tags</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--danger);">❌</div>
+                    <div class="metric-label">Schema</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--danger);">❌</div>
+                    <div class="metric-label">Canonical</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" style="color:var(--warning);">⚠️</div>
+                    <div class="metric-label">Security Headers</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- المشاكل الحرجة -->
+        <div class="card">
+            <h1>🚨 المشاكل الحرجة</h1>
+            <div class="alert alert-danger">
+                <strong>1. لا Schema Markup</strong> - فرصة ضائعة للـ Rich Snippets
+            </div>
+            <div class="alert alert-danger">
+                <strong>2. لا Canonical Tags</strong> -可能导致 duplicate content
+            </div>
+            <div class="alert alert-danger">
+                <strong>3. Security Headers مفقودة</strong> - X-Frame, CSP, X-Content-Type
+            </div>
+            <div class="alert alert-warning">
+                <strong>4. محتوى شحيح</strong> - معظم الصفحات تحت 100 كلمة
+            </div>
+            <div class="alert alert-warning">
+                <strong>5. لا Blog/أخبار</strong> - فرصة ضائعة للـ SEO
+            </div>
+        </div>
+
+        <!-- المهام -->
+        <div class="card">
+            <h1>✅ قائمة المهام</h1>
+            <div class="task">
+                <div class="priority priority-high"></div>
+                <div class="task-text"><strong>إضافة Schema Markup</strong><br>Organization + LocalBusiness + WebSite</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-high"></div>
+                <div class="task-text"><strong>إضافة Canonical Tags</strong><br>لكل صفحة</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-high"></div>
+                <div class="task-text"><strong>إضافة Security Headers</strong><br>X-Frame-Options, CSP, X-Content-Type</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-medium"></div>
+                <div class="task-text"><strong>تحسين المحتوى</strong><br>إضافة 300+ كلمة لصفحات المشاريع</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-medium"></div>
+                <div class="task-text"><strong>إنشاء قسم الأخبار</strong><br>Blog/Ads_section</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-medium"></div>
+                <div class="task-text"><strong>إضافة Meta Descriptions</strong><br>لصفحات المشاريع</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-low"></div>
+                <div class="task-text"><strong>إضافة hreflang tags</strong><br>للغتين العربية والإنجليزية</div>
+            </div>
+            <div class="task">
+                <div class="priority priority-low"></div>
+                <div class="task-text"><strong>تحسين Core Web Vitals</strong><br>قياس ومتابعة</div>
+            </div>
+        </div>
+
+        <!-- مقارنة المنافسين -->
+        <div class="card">
+            <h1>👥 مقارنة مع المنافسين</h1>
+            <table class="table">
+                <tr><th>العنصر</th><th>aljoodb</th><th>eljod</th><th>aljud</th><th>aljod</th></tr>
+                <tr><td>النتيجة</td><td>38</td><td>35</td><td>30</td><td>40</td></tr>
+                <tr><td>HTTPS</td><td>✅</td><td>⚠️</td><td>⚠️</td><td>⚠️</td></tr>
+                <tr><td>Schema</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+                <tr><td>Speed</td><td>✅</td><td>⚠️</td><td>⚠️</td><td>⚠️</td></tr>
+                <tr><td>Content</td><td>⚠️</td><td>✅</td><td>❌</td><td>✅</td></tr>
+            </table>
+            <div class="alert alert-success" style="margin-top:15px;">
+                ✅ aljoodb يتفوق في السرعة و HTTPS على معظم المنافسين
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="card">
+            <h1>🔗 صفحات التحليل</h1>
+            <div class="grid">
+                <a href="TECHNICAL-AUDIT.html" style="text-decoration:none;color:inherit;">
+                    <div class="metric">
+                        <div style="font-size:1.5em;">🔍</div>
+                        <div class="metric-label">الفحص التقني</div>
+                    </div>
+                </a>
+                <a href="KEYWORDS.html" style="text-decoration:none;color:inherit;">
+                    <div class="metric">
+                        <div style="font-size:1.5em;">🔑</div>
+                        <div class="metric-label">الكلمات المفتاحية</div>
+                    </div>
+                </a>
+                <a href="COMPETITORS.html" style="text-decoration:none;color:inherit;">
+                    <div class="metric">
+                        <div style="font-size:1.5em;">👥</div>
+                        <div class="metric-label">المنافسين</div>
+                    </div>
+                </a>
+                <a href="ON-PAGE.html" style="text-decoration:none;color:inherit;">
+                    <div class="metric">
+                        <div style="font-size:1.5em;">📝</div>
+                        <div class="metric-label">On-Page SEO</div>
+                    </div>
+                </a>
+                <a href="CONTENT.html" style="text-decoration:none;color:inherit;">
+                    <div class="metric">
+                        <div style="font-size:1.5em;">📖</div>
+                        <div class="metric-label">المحتوى</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Local SEO -->
+        <div class="card">
+            <h1>📍 Local SEO</h1>
+            <ul>
+                <li>⚠️ لم نتمكن من التحقق من Google Business Profile</li>
+                <li>⚠️ لا معلومات NAP واضحة (الاسم، العنوان، الهاتف)</li>
+                <li>💡 يجب إنشاء/المطالبة Google Business Profile</li>
+                <li>💡 يجب إضافة بيانات NAP متسقة</li>
+                <li>💡 يجب جمع المراجعات</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 - Socialbalaant | لوحة SEO</p>
+    </div>
+</body>
+</html>

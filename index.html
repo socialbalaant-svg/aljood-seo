@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة SEO - Aljood</title>
+    <title>جمعية الجود للخدمات الإنسانية - SEO Dashboard</title>
     <style>
         :root { --primary: #7b1fa2; --light: #f5f5f5; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,24 +17,27 @@
         .nav-tabs a:hover, .nav-tabs a.active { background: rgba(255,255,255,0.2); }
         .header { background: linear-gradient(135deg, var(--primary), #7b1fa2); color: white; padding: 40px; text-align: center; }
         .header h1 { font-size: 1.8em; margin-bottom: 10px; }
-        .score { font-size: 3em; margin: 15px 0; }
+        .header p { opacity: 0.9; }
+        .score { font-size: 4em; font-weight: bold; margin: 20px 0; }
         .content { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .card { background: var(--white); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: var(--primary); margin-bottom: 15px; }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 1.3em; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
         .badge { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 0.85em; margin: 2px; }
         .badge-success { background: #e8f5e9; color: #2e7d32; }
         .badge-warning { background: #fff8e1; color: #f57c00; }
         .badge-danger { background: #ffebee; color: #c62828; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        ul { padding-right: 20px; }
-        li { margin-bottom: 8px; }
         .footer { background: var(--primary); color: white; text-align: center; padding: 15px; margin-top: 30px; }
-        .task { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; }
-        .task:last-child { border-bottom: none; }
-        .priority { width: 10px; height: 10px; border-radius: 50%; margin-left: 15px; }
-        .priority-high { background: #c62828; }
-        .priority-medium { background: #f57c00; }
-        .priority-low { background: #4CAF50; }
+        ul { padding-right: 20px; }
+        li { margin-bottom: 8px; line-height: 1.7; }
+        a.card-link { text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
+        a.card-link:hover { transform: translateY(-3px); }
+        .stat { text-align: center; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        .stat-value { font-size: 2em; font-weight: bold; color: var(--primary); }
+        .stat-label { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .alert { padding: 15px; border-radius: 8px; margin: 10px 0; border-right: 4px solid; }
+        .alert-danger { background: #ffebee; border-color: #c62828; }
+        .alert-success { background: #e8f5e9; border-color: #2e7d32; }
     </style>
 </head>
 <body>
@@ -51,32 +54,126 @@
         <a href="TECHNICAL-AUDIT.html">🔍 الفحص التقني</a>
         <a href="KEYWORDS.html">🔑 الكلمات</a>
         <a href="COMPETITORS.html">👥 المنافسين</a>
+        <a href="ON-PAGE.html">📝On-Page</a>
         <a href="CONTENT.html">📖 المحتوى</a>
-        <a href="TASKS.html">✅ المهام</a>
+        <a href="SEO-DASHBOARD.html">📊 لوحة SEO</a>
     </div>
+
     <div class="header">
-        <h1>لوحة SEO - الجود</h1>
-        <div class="score">35/100</div>
+        <h1>🔍 تحليل SEO - جمعية الجود للخدمات الإنسانية</h1>
+        <p>aljoodb.org.sa</p>
+        <div class="score">38</div>
+        <p>من 100 - يحتاج تحسين</p>
     </div>
+
     <div class="content">
+        <!-- ملخص سريع -->
         <div class="card">
-            <h1>📊 ملخص الفحص</h1>
-            <p>الموقع: aljoodb.org.sa</p>
-            <p style="margin-top:10px;"><strong>النتيجة:</strong> 35/100</p>
-        </div>
-        <div class="card">
-            <h1>📋 الأقسام</h1>
+            <h1>📊 ملخص التحليل</h1>
             <div class="grid">
-                <a href="TECHNICAL-AUDIT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔍 الفحص التقني</h3></div></a>
-                <a href="KEYWORDS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>🔑 الكلمات</h3></div></a>
-                <a href="COMPETITORS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>👥 المنافسين</h3></div></a>
-                <a href="CONTENT.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>📖 المحتوى</h3></div></a>
-                <a href="TASKS.html" style="text-decoration:none;color:inherit;"><div class="card"><h3>✅ المهام</h3></div></a>
+                <div class="stat">
+                    <div class="stat-value" style="color:#2e7d32;">✅</div>
+                    <div class="stat-label">HTTPS مفعّل</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color:#2e7d32;">✅</div>
+                    <div class="stat-label">SSL ساري</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color:#2e7d32;">✅</div>
+                    <div class="stat-label">sitemap.xml</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color:#2e7d32;">✅</div>
+                    <div class="stat-label">OG Tags</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color:#c62828;">❌</div>
+                    <div class="stat-label">Schema Markup</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color:#c62828;">❌</div>
+                    <div class="stat-label">Canonical Tags</div>
+                </div>
             </div>
         </div>
+
+        <!-- المشاكل الرئيسية -->
+        <div class="card">
+            <h1>🚨 المشاكل الرئيسية</h1>
+            <div class="alert alert-danger">
+                <strong>1.</strong> لا يوجد Schema Markup (فرصة ضائعة للRich Snippets)
+            </div>
+            <div class="alert alert-danger">
+                <strong>2.</strong> لا يوجد Canonical Tags (duplicate content)
+            </div>
+            <div class="alert alert-danger">
+                <strong>3.</strong> Security Headers مفقودة
+            </div>
+            <div class="alert alert-danger">
+                <strong>4.</strong> محتوى شحيح (Thin Content)
+            </div>
+        </div>
+
+        <!-- صفحات التحليل -->
+        <div class="card">
+            <h1>📄 صفحات التحليل التفصيلي</h1>
+            <div class="grid">
+                <a class="card-link" href="TECHNICAL-AUDIT.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">🔍</div>
+                        <div class="stat-label">الفحص التقني الشامل</div>
+                    </div>
+                </a>
+                <a class="card-link" href="KEYWORDS.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">🔑</div>
+                        <div class="stat-label">الكلمات المفتاحية</div>
+                    </div>
+                </a>
+                <a class="card-link" href="COMPETITORS.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">👥</div>
+                        <div class="stat-label">تحليل المنافسين</div>
+                    </div>
+                </a>
+                <a class="card-link" href="ON-PAGE.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">📝</div>
+                        <div class="stat-label">On-Page SEO</div>
+                    </div>
+                </a>
+                <a class="card-link" href="CONTENT.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">📖</div>
+                        <div class="stat-label">تحليل المحتوى</div>
+                    </div>
+                </a>
+                <a class="card-link" href="SEO-DASHBOARD.html">
+                    <div class="stat">
+                        <div style="font-size:1.5em;">📊</div>
+                        <div class="stat-label">لوحة SEO</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- معلومات الموقع -->
+        <div class="card">
+            <h1>🌐 معلومات الموقع</h1>
+            <table style="width:100%; border-collapse:collapse;">
+                <tr><td style="padding:10px; border-bottom:1px solid #eee;"><strong>الرابط</strong></td><td style="padding:10px; border-bottom:1px solid #eee;">aljoodb.org.sa</td></tr>
+                <tr><td style="padding:10px; border-bottom:1px solid #eee;"><strong>المنصة</strong></td><td style="padding:10px; border-bottom:1px solid #eee;">Laravel + Inertia (SPA)</td></tr>
+                <tr><td style="padding:10px; border-bottom:1px solid #eee;"><strong>الاستضافة</strong></td><td style="padding:10px; border-bottom:1px solid #eee;">Cloudflare</td></tr>
+                <tr><td style="padding:10px; border-bottom:1px solid #eee;"><strong>الموقع</strong></td><td style="padding:10px; border-bottom:1px solid #eee;">بحرة، المملكة العربية السعودية</td></tr>
+                <tr><td style="padding:10px; border-bottom:1px solid #eee;"><strong>SSL</strong></td><td style="padding:10px; border-bottom:1px solid #eee;">Let's Encrypt (صالح حتى مايو 2026)</td></tr>
+                <tr><td style="padding:10px;"><strong>المشاريع</strong></td><td style="padding:10px;">17 مشروع خيري</td></tr>
+            </table>
+        </div>
     </div>
+
     <div class="footer">
-        <p>© 2026 - Socialbalaant</p>
+        <p>© 2026 - Socialbalaant | تحليل SEO</p>
     </div>
 </body>
 </html>
